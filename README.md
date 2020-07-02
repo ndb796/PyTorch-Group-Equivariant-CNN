@@ -69,5 +69,5 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 
 * All pre-trained models are provided in this repository :)
 <pre>
-python3 test.py --checkpoint ResNet18_P4M_Mixup --dataset CIFAR
+python3 test.py --dataset CIFAR --checkpoint ResNet18_P4M_Mixup_on_CIFAR
 </pre>
