@@ -4,8 +4,7 @@ from custom_groupy.garray.garray import GArray
 from custom_groupy.garray.finitegroup import FiniteGroup
 from custom_groupy.garray.p4m_array import P4MArray
 from custom_groupy.garray.Z2_array import Z2Array
-
-from matrix_garray import MatrixGArray
+from custom_groupy.garray.matrix_garray import MatrixGArray
 
 class D4Array(MatrixGArray):
 
