@@ -39,6 +39,7 @@ python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1
 
 #### 2. Group P4M with Mixup (My Contribution)
 
+* The Mixup method was proposed by Hongyi Zhang in [ICLR 2018](https://arxiv.org/abs/1710.09412).
 * The train command example (Single GPU)
 <pre>
 python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M_Mixup --lr=0.1 --mixup
