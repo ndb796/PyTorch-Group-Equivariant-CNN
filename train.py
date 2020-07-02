@@ -81,21 +81,24 @@ def train(epoch):
     for batch_idx, (inputs, targets) in enumerate(trainloader):
         if use_cuda:
             inputs, targets = inputs.cuda(), targets.cuda()
+
         if args.mixup:
             inputs, targets_a, targets_b, lam = mixup_data(inputs, targets, 1.0, use_cuda)
             inputs, targets_a, targets_b = map(Variable, (inputs, targets_a, targets_b))
             outputs = net(inputs)
             loss = mixup_criterion(criterion, outputs, targets_a, targets_b, lam)
+            _, predicted = torch.max(outputs.data, 1)
+            correct += lam * predicted.eq(targets_a.data).cpu().sum().float()
+            correct += (1 - lam) * predicted.eq(targets_b.data).cpu().sum().float()
         else:
             inputs, targets = Variable(inputs), Variable(targets)
             outputs = net(inputs)
             loss = criterion(outputs, targets)
+            _, predicted = torch.max(outputs.data, 1)
+            correct += predicted.eq(targets.data).cpu().sum()
 
-        train_loss += loss.item()
-        _, predicted = torch.max(outputs.data, 1)
         total += targets.size(0)
-        correct += predicted.eq(targets.data).cpu().sum()
-
+        train_loss += loss.item()
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
