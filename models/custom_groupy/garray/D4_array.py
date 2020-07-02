@@ -1,9 +1,9 @@
 import numpy as np
 
-from garray import GArray
-from finitegroup import FiniteGroup
-from p4m_array import P4MArray
-from Z2_array import Z2Array
+from custom_groupy.garray.garray import GArray
+from custom_groupy.garray.finitegroup import FiniteGroup
+from custom_groupy.garray.p4m_array import P4MArray
+from custom_groupy.garray.Z2_array import Z2Array
 
 from matrix_garray import MatrixGArray
 
