@@ -28,7 +28,7 @@
 
 #### 1. Group P4M (Original Paper)
 
-* The train command examples (with a single GPU)
+* The train command examples
 <pre>
 # ResNet18 on CIFAR
 python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_on_CIFAR
@@ -53,7 +53,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 #### 2. Group P4M with Mixup (My Own Experiment)
 
 * The Mixup method was proposed by Hongyi Zhang in [ICLR 2018](https://arxiv.org/abs/1710.09412).
-* The train command examples (with a single GPU)
+* The train command examples
 <pre>
 # ResNet18 on CIFAR
 python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
@@ -75,22 +75,28 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 |ResNet50|xx.xx%|26.27%|
 * [Trained model download]
 
-#### 3. Transfer Learning for AIGS-10 (My Own Experiment)
+#### 3. Transfer Learning + Group P4M with Mixup (My Own Experiment)
 
-* The train command examples (with a single GPU)
+* The train command examples
 <pre>
+# ResNet18 on CIFAR
+python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
 # ResNet18 on AIGS
-python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
+# ResNet34 on CIFAR
+python3 train.py --model ResNet34 --dataset CIFAR --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
 # ResNet34 on AIGS
-python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
+# ResNet50 on CIFAR
+python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
 # ResNet50 on AIGS
-python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
 </pre>
-||AIGS-10|
-|------|---|
-|ResNet18|xx.xx%|
-|ResNet34|xx.xx%|
-|ResNet50|xx.xx%|
+||CIFAR-10 (P4M + Mixup) |AIGS-10 (P4M)|
+|------|---|---|
+|ResNet18|xx.xx%|<b>49.54%</b>|
+|ResNet34|xx.xx%|xx.xx%|
+|ResNet50|xx.xx%|xx.xx%|
 * [Trained model download]
 
 ### Testing
