@@ -50,7 +50,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 |ResNet50|xx.xx%|27.12%|
 * [Trained model download]
 
-#### 2. Group P4M with Mixup (My Contribution)
+#### 2. Group P4M with Mixup (My Own Experiment)
 
 * The Mixup method was proposed by Hongyi Zhang in [ICLR 2018](https://arxiv.org/abs/1710.09412).
 * The train command examples (with a single GPU)
@@ -73,6 +73,24 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 |ResNet18|<b>95.89%</b>|43.27%|
 |ResNet34|xx.xx%|38.84%|
 |ResNet50|xx.xx%|26.27%|
+* [Trained model download]
+
+#### 3. Transfer Learning for AIGS-10 (My Own Experiment)
+
+* The train command examples (with a single GPU)
+<pre>
+# ResNet18 on AIGS
+python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+# ResNet34 on AIGS
+python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+# ResNet50 on AIGS
+python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
+</pre>
+||AIGS-10|
+|------|---|---|
+|ResNet18|43.27%|
+|ResNet34|38.84%|
+|ResNet50|26.27%|
 * [Trained model download]
 
 ### Testing
