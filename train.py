@@ -123,6 +123,10 @@ def train(epoch):
         optimizer.step()
 
         print(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)' % (train_loss / (batch_idx + 1), 100. * correct / total, correct, total))
+        
+        if args.transfer_learning:
+            if batch_idx >= len(trainloader) - 2:
+                break
 
 def test(epoch):
     global best_acc
