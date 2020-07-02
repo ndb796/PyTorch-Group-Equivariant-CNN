@@ -24,7 +24,6 @@ from Z2_array import Z2Array
 # The matrix representation is easier to work with when multiplying and inverting group elements,
 # while the integer parameterization is required when indexing gfunc on p4.
 
-
 class P4Array(MatrixGArray):
 
     parameterizations = ['int', 'hmat']
@@ -67,17 +66,14 @@ class P4Array(MatrixGArray):
         out[..., 2] = v
         return out
 
-
 # Generators
 r = P4Array(data=np.array([1, 0, 0]), p='int')
 u = P4Array(data=np.array([0, 1, 0]), p='int')
 v = P4Array(data=np.array([0, 0, 1]), p='int')
 
-
 def identity(shape=(), p='int'):
     e = P4Array(np.zeros(shape + (3,), dtype=np.int), 'int')
     return e.reparameterize(p)
-
 
 def rand(minu, maxu, minv, maxv, size=()):
     data = np.zeros(size + (3,), dtype=np.int64)
@@ -85,7 +81,6 @@ def rand(minu, maxu, minv, maxv, size=()):
     data[..., 1] = np.random.randint(minu, maxu, size)
     data[..., 2] = np.random.randint(minv, maxv, size)
     return P4Array(data=data, p='int')
-
 
 def rotation(r, center=(0, 0)):
     r = np.asarray(r)
@@ -101,13 +96,11 @@ def rotation(r, center=(0, 0)):
 
     return t * r0 * t.inv()
 
-
 def translation(t):
     t = np.asarray(t)
     tdata = np.zeros(t.shape[:-1] + (3,), dtype=np.int)
     tdata[..., 1:] = t
     return P4Array(tdata)
-
 
 def r_range(start=0, stop=4, step=1):
     assert stop > 0
@@ -119,25 +112,21 @@ def r_range(start=0, stop=4, step=1):
     m[:, 0] = np.arange(start, stop, step)
     return P4Array(m)
 
-
 def u_range(start=-1, stop=2, step=1):
     m = np.zeros((stop - start, 3), dtype=np.int)
     m[:, 1] = np.arange(start, stop, step)
     return P4Array(m)
-
 
 def v_range(start=-1, stop=2, step=1):
     m = np.zeros((stop - start, 3), dtype=np.int)
     m[:, 2] = np.arange(start, stop, step)
     return P4Array(m)
 
-
 def meshgrid(r=r_range(), u=u_range(), v=v_range()):
     r = P4Array(r.data[:, None, None, ...], p=r.p)
     u = P4Array(u.data[None, :, None, ...], p=u.p)
     v = P4Array(v.data[None, None, :, ...], p=v.p)
     return u * v * r
-
 
 # When rotating even-sized filters, rotating around the origin would not map the filter onto itself.
 # For example, take a 2x2 filter
