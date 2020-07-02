@@ -1,8 +1,8 @@
+import torch
 from torch.utils.data import Dataset
 
 from PIL import Image
 import numpy as np
-
 
 class MyDataset(Dataset):
     def __init__(self, data, targets, transform=None):
@@ -22,7 +22,6 @@ class MyDataset(Dataset):
 
     def __len__(self):
         return len(self.data)
-
 
 def AIGS_Dataset(transform_train, transform_test):
     aigs10_classes = ('aeroplane', 'car', 'bird', 'cat', 'sheep', 'dog', 'chair', 'horse', 'boat', 'train')
@@ -46,7 +45,6 @@ def AIGS_Dataset(transform_train, transform_test):
 
     return trainset, testset
 
-
 def mixup_data(x, y, alpha=1.0, use_cuda=True):
     if alpha > 0:
         lam = np.random.beta(alpha, alpha)
@@ -63,7 +61,6 @@ def mixup_data(x, y, alpha=1.0, use_cuda=True):
     y_a, y_b = y, y[index]
 
     return mixed_x, y_a, y_b, lam
-
 
 def mixup_criterion(criterion, pred, y_a, y_b, lam):
     return lam * criterion(pred, y_a) + (1 - lam) * criterion(pred, y_b)
