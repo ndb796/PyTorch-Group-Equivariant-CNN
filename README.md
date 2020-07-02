@@ -13,6 +13,8 @@
 * Training batch size: 128
 * Weight decay: 0.0005
 * Momentum: 0.9
+* Data augmentation: Random crop, Random horizontal flip
+* Input normalization
 * Learning rate adjustment
   1) 0.1 for epoch [0, 50)
   2) 0.01 for epoch [50, 100)
@@ -30,14 +32,21 @@ python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1
 </pre>
 * The train results
 
-||ResNet18|ResNet50|
+||CIFAR-10|AIGS-10|
 |------|---|---|
-|Test accuarcy|94.44%|xx.xx%|
+|ResNet18|94.44%|47.81%|
+|ResNet50|xx.xx%|xx.xx%|
 
 #### 2. Group P4M with Mixup (My Contribution)
 
+* The train command example (Single GPU)
+<pre>
+python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1 --mixup
+</pre>
+
 * The train results
 
-||ResNet18|ResNet50|
+||CIFAR-10|AIGS-10|
 |------|---|---|
-|Test accuarcy|95.89%|xx.xx%|
+|ResNet18|95.89%|xx.xx%|
+|ResNet50|xx.xx%|xx.xx%|
