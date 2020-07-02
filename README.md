@@ -26,7 +26,7 @@
 
 #### 1. Group P4M (Original Paper)
 
-* The train command examples (Single GPU)
+* The train command examples (with a single GPU)
 <pre>
 # ResNet18 on CIFAR
 python3 train.py --checkpoint ResNet18_P4M_on_CIFAR --dataset CIFAR
@@ -42,9 +42,12 @@ python3 train.py --checkpoint ResNet18_P4M_on_AIGS --dataset AIGS
 #### 2. Group P4M with Mixup (My Contribution)
 
 * The Mixup method was proposed by Hongyi Zhang in [ICLR 2018](https://arxiv.org/abs/1710.09412).
-* The train command example (Single GPU)
+* The train command examples (with a single GPU)
 <pre>
-python3 train.py --checkpoint ResNet18_P4M_Mixup --dataset CIFAR --mixup
+# ResNet18 on CIFAR
+python3 train.py --checkpoint ResNet18_P4M_Mixup_on_CIFAR --dataset CIFAR --mixup
+# ResNet18 on AIGS
+python3 train.py --checkpoint ResNet18_P4M_Mixup_on_AIGS --dataset AIGS --mixup
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
