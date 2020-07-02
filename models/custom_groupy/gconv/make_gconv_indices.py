@@ -47,14 +47,8 @@ def make_d4_z2_indices(ksize):
 
 def make_d4_p4m_indices(ksize):
     assert ksize % 2 == 1  # TODO
-    x = np.random.rand(32, ksize, ksize)
-    # x = np.random.rand(32, ksize, ksize)
+    x = np.random.randn(8, ksize, ksize)
     f = P4MFuncArray(v=x)
-    # print("Temp", f)
-    #f = P4MFuncArray(v=np.random.rand(16, ksize, ksize))
-    #print(f)
-    # f = P4MFuncArray(v=np.random.rand(32, ksize, ksize))
-    #print(f)
     li = f.left_translation_indices(D4.flatten()[:, None, None, None])
     return li.astype('int32')
 
