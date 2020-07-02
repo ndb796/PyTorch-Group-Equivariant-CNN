@@ -2,11 +2,11 @@ import numpy as np
 import torch
 from torch.autograd import Variable
 
-from splitgconv2d import P4ConvZ2, P4ConvP4, P4MConvZ2, P4MConvP4M
+from custom_groupy.gconv.pytorch_gconv.splitgconv2d import P4ConvZ2, P4ConvP4, P4MConvZ2, P4MConvP4M
 
 def test_p4_net_equivariance():
-    from groupy.gfunc import Z2FuncArray, P4FuncArray
-    import groupy.garray.C4_array as c4a
+    from custom_groupy.gfunc import Z2FuncArray, P4FuncArray
+    import custom_groupy.garray.C4_array as c4a
 
     im = np.random.randn(1, 1, 11, 11).astype('float32')
     check_equivariance(
@@ -21,8 +21,8 @@ def test_p4_net_equivariance():
     )
 
 def test_p4m_net_equivariance():
-    from groupy.gfunc import Z2FuncArray, P4MFuncArray
-    import groupy.garray.D4_array as d4a
+    from custom_groupy.gfunc import Z2FuncArray, P4MFuncArray
+    import custom_groupy.garray.D4_array as d4a
 
     im = np.random.randn(1, 1, 11, 11).astype('float32')
     check_equivariance(
@@ -37,9 +37,9 @@ def test_p4m_net_equivariance():
     )
 
 def test_g_z2_conv_equivariance():
-    from groupy.gfunc import Z2FuncArray, P4FuncArray, P4MFuncArray
-    import groupy.garray.C4_array as c4a
-    import groupy.garray.D4_array as d4a
+    from custom_groupy.gfunc import Z2FuncArray, P4FuncArray, P4MFuncArray
+    import custom_groupy.garray.C4_array as c4a
+    import custom_groupy.garray.D4_array as d4a
 
     im = np.random.randn(1, 1, 11, 11).astype('float32')
     check_equivariance(
@@ -59,8 +59,8 @@ def test_g_z2_conv_equivariance():
     )
 
 def test_p4_p4_conv_equivariance():
-    from groupy.gfunc import P4FuncArray
-    import groupy.garray.C4_array as c4a
+    from custom_groupy.gfunc import P4FuncArray
+    import custom_groupy.garray.C4_array as c4a
 
     im = np.random.randn(1, 1, 4, 11, 11).astype('float32')
     check_equivariance(
@@ -72,8 +72,8 @@ def test_p4_p4_conv_equivariance():
     )
 
 def test_p4m_p4m_conv_equivariance():
-    from groupy.gfunc import P4MFuncArray
-    import groupy.garray.D4_array as d4a
+    from custom_groupy.gfunc import P4MFuncArray
+    import custom_groupy.garray.D4_array as d4a
 
     im = np.random.randn(1, 1, 8, 11, 11).astype('float32')
     check_equivariance(
