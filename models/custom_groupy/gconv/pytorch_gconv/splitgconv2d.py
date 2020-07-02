@@ -66,19 +66,11 @@ class SplitGConv2D(nn.Module):
         return make_indices_functions[(self.input_stabilizer_size, self.output_stabilizer_size)](self.ksize)
 
     def forward(self, input):
-        print("weights", self.weight.shape, "inds", self.inds.shape)
-
         tw = trans_filter(self.weight, self.inds)
-#        tw_shape = (self.out_channels * self.output_stabilizer_size,
-#                    self.in_channels * self.input_stabilizer_size,
-#                    self.ksize, self.ksize)
         tw_shape = (self.out_channels * self.output_stabilizer_size,
-                    -1,
+                    self.in_channels * self.input_stabilizer_size,
                     self.ksize, self.ksize)
-        print("Init:", tw.shape)
-        print(tw_shape)
         tw = tw.view(tw_shape)
-        print(tw.shape)
 
         input_shape = input.size()
         input = input.view(input_shape[0], self.in_channels*self.input_stabilizer_size, input_shape[-2], input_shape[-1])
