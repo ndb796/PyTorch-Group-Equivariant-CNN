@@ -41,7 +41,7 @@ python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1
 
 * The train command example (Single GPU)
 <pre>
-python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1 --mixup
+python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M_Mixup --lr=0.1 --mixup
 </pre>
 
 * The train results
@@ -50,3 +50,10 @@ python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1 --mixup
 |------|---|---|
 |ResNet18|95.89%|xx.xx%|
 |ResNet50|xx.xx%|xx.xx%|
+
+### Testing
+
+* All pre-trained models are provided in this repository :)
+<pre>
+python3 test.py --n_epochs 180 --checkpoint ResNet18_P4M_Mixup
+</pre>
