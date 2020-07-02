@@ -20,6 +20,7 @@ parser = argparse.ArgumentParser(description='PyTorch Training')
 parser.add_argument('--lr', default=0.01, type=float, help='learning rate')
 parser.add_argument('--resume', action='store_true', help='resume from checkpoint')
 parser.add_argument('--mixup', action='store_true', help='apply the Mixup method')
+parser.add_argument('--transfer_learning', action='store_true', help='apply the Transfer Learning')
 parser.add_argument('--n_epochs', default=250, type=int)
 parser.add_argument('--checkpoint', required=True)
 parser.add_argument('--dataset', required=True)
@@ -64,11 +65,23 @@ if args.resume:
 else:
     print('==> Building model...')
     if args.model == 'ResNet18':
-        net = ResNet18()
+        if args.trasfer_learning:
+            net = torchvision.models.resnet18(pretrained=True)
+        else:
+            net = ResNet18()
     elif args.model == 'ResNet34':
-        net = ResNet34()
+        if args.trasfer_learning:
+            net = torchvision.models.resnet34(pretrained=True)
+        else:
+            net = ResNet34()
     elif args.model == 'ResNet50':
-        net = ResNet50()
+        if args.trasfer_learning:
+            net = torchvision.models.resnet50(pretrained=True)
+        else:
+            net = ResNet50()
+    if args.transfer_learning:
+        num_ftrs = net.fc.in_features
+        net.fc = nn.Linear(num_ftrs, 10)
 
 if use_cuda:
     net.cuda()
