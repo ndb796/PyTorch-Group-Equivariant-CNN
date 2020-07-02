@@ -65,17 +65,17 @@ if args.resume:
 else:
     print('==> Building model...')
     if args.model == 'ResNet18':
-        if args.trasfer_learning:
+        if args.transfer_learning:
             net = torchvision.models.resnet18(pretrained=True)
         else:
             net = ResNet18()
     elif args.model == 'ResNet34':
-        if args.trasfer_learning:
+        if args.transfer_learning:
             net = torchvision.models.resnet34(pretrained=True)
         else:
             net = ResNet34()
     elif args.model == 'ResNet50':
-        if args.trasfer_learning:
+        if args.transfer_learning:
             net = torchvision.models.resnet50(pretrained=True)
         else:
             net = ResNet50()
