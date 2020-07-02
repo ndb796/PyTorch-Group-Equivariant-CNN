@@ -30,7 +30,7 @@ best_acc = 0
 start_epoch = 0
 n_epochs = args.n_epochs
 
-print('==> Preparing data..')
+print('==> Preparing data...')
 means = (0.4914, 0.4822, 0.4465)
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
@@ -54,14 +54,14 @@ trainloader = torch.utils.data.DataLoader(trainset, batch_size=128, shuffle=True
 testloader = torch.utils.data.DataLoader(testset, batch_size=128, shuffle=False, num_workers=2)
 
 if args.resume:
-    print('==> Resuming from checkpoint..')
+    print('==> Resuming from checkpoint...')
     assert os.path.isdir(args.checkpoint), 'Error: no checkpoint directory found!'
     checkpoint = torch.load(os.path.join(args.checkpoint, 'ckpt.t7'))
     net = checkpoint['net']
     best_acc = checkpoint['acc']
     start_epoch = checkpoint['epoch']
 else:
-    print('==> Building model..')
+    print('==> Building model...')
     net = ResNet18()
 
 if use_cuda:
@@ -127,7 +127,7 @@ def test(epoch):
 
     acc = 100. * correct / total
     if acc > best_acc:
-        print('Saving..')
+        print('Saving...')
         state = {
             'net': net,
             'acc': acc,
