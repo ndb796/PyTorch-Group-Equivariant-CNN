@@ -1,8 +1,5 @@
-import sys
-sys.path.append('../')
-
-import garray.Z2_array as z2a
-from gfuncarray import GFuncArray
+import custom_groupy.garray.Z2_array as z2a
+from custom_groupy.gfunc.gfuncarray import GFuncArray
 
 class Z2FuncArray(GFuncArray):
 
