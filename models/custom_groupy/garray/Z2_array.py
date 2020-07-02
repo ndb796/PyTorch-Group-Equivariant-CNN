@@ -1,6 +1,6 @@
 import numpy as np
 
-from garray import GArray
+from custom_groupy.garray.garray import GArray
 
 class Z2Array(GArray):
 
