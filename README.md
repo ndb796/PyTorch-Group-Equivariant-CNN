@@ -87,10 +87,10 @@ python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_Transfer_
 python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_AIGS --mixup --transfer_learning
 </pre>
 ||AIGS-10|
-|------|---|---|
-|ResNet18|43.27%|
-|ResNet34|38.84%|
-|ResNet50|26.27%|
+|------|---|
+|ResNet18|xx.xx%|
+|ResNet34|xx.xx%|
+|ResNet50|xx.xx%|
 * [Trained model download]
 
 ### Testing
