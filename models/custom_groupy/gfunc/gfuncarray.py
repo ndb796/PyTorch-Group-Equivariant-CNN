@@ -1,10 +1,7 @@
 import copy
 import numpy as np
 
-import sys
-sys.path.append('../')
-
-from garray.garray import GArray
+from custom_groupy.garray.garray import GArray
 
 class GFuncArray(object):
 
