@@ -28,7 +28,7 @@
 
 * The train command example (Single GPU)
 <pre>
-python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1 --dataset CIFAR
+python3 train.py --checkpoint ResNet18_P4M --dataset CIFAR
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
@@ -42,7 +42,7 @@ python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M --lr=0.1 --dataset CIF
     * I used the alpha 
 * The train command example (Single GPU)
 <pre>
-python3 train.py --n_epochs 250 --checkpoint ResNet18_P4M_Mixup --lr=0.1 --dataset CIFAR --mixup
+python3 train.py --checkpoint ResNet18_P4M_Mixup --dataset CIFAR --mixup
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
