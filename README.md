@@ -80,15 +80,15 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 * The train command examples
 <pre>
 # ResNet18 on CIFAR
-python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
+python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.01 --n_epochs 160
 # ResNet18 on AIGS
 python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
 # ResNet34 on CIFAR
-python3 train.py --model ResNet34 --dataset CIFAR --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
+python3 train.py --model ResNet34 --dataset CIFAR --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.01 --n_epochs 160
 # ResNet34 on AIGS
 python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
 # ResNet50 on CIFAR
-python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.001 --n_epochs 80
+python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_CIFAR --mixup --transfer_learning --lr=0.01 --n_epochs 160
 # ResNet50 on AIGS
 python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_Mixup_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
 </pre>
