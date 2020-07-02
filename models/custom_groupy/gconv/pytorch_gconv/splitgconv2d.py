@@ -5,10 +5,7 @@ import torch
 import math
 from torch.nn.modules.utils import _pair
 
-import sys
-sys.path.append('../')
-
-from make_gconv_indices import *
+from custom_groupy.gconv.make_gconv_indices import *
 
 make_indices_functions = {(1, 4): make_c4_z2_indices,
                           (4, 4): make_c4_p4_indices,
