@@ -26,9 +26,12 @@
 
 #### 1. Group P4M (Original Paper)
 
-* The train command example (Single GPU)
+* The train command examples (Single GPU)
 <pre>
-python3 train.py --checkpoint ResNet18_P4M --dataset CIFAR
+# ResNet18 on CIFAR
+python3 train.py --checkpoint ResNet18_P4M_on_CIFAR --dataset CIFAR
+# ResNet18 on AIGS
+python3 train.py --checkpoint ResNet18_P4M_on_AIGS --dataset AIGS
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
