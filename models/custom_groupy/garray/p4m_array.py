@@ -1,7 +1,7 @@
 import numpy as np
 
-from matrix_garray import MatrixGArray
-from Z2_array import Z2Array
+from custom_groupy.garray.matrix_garray import MatrixGArray
+from custom_groupy.garray.Z2_array import Z2Array
 
 # A transformation in p4m can be coded using four integers:
 # m in {0, 1}, mirror reflection in the second translation axis or not
