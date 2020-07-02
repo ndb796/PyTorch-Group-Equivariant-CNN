@@ -16,11 +16,11 @@
 * Data augmentation: Random crop, Random horizontal flip
 * Input normalization
 * Learning rate adjustment
-  1) 0.1 for epoch [0, 50)
-  2) 0.01 for epoch [50, 100)
-  3) 0.001 for epoch [100, 150)
-  4) 0.0001 for epoch [150, 200)
-  5) 0.00001 for epoch [200, 250)
+  1) 0.01 for epoch [0, 50)
+  2) 0.001 for epoch [50, 100)
+  3) 0.0001 for epoch [100, 150)
+  4) 0.00001 for epoch [150, 200)
+  5) 0.000001 for epoch [200, 250)
 
 ### Training
 
