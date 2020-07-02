@@ -53,7 +53,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 # ResNet18 on CIFAR
 python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
 # ResNet18 on AIGS
-python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
+python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_Mixup_on_AIGS --mixup
 # ResNet50 on CIFAR
 python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_P4M_Mixup_on_CIFAR --mixup
 # ResNet50 on AIGS
