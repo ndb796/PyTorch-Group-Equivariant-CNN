@@ -21,7 +21,6 @@ args = parser.parse_args()
 use_cuda = torch.cuda.is_available()
 best_acc = 0
 start_epoch = 0
-n_epochs = args.n_epochs
 
 print('==> Preparing data...')
 means = (0.4914, 0.4822, 0.4465)
