@@ -142,7 +142,7 @@ def test(epoch):
         torch.save(state, os.path.join(args.checkpoint, 'ckpt.t7'))
         best_acc = acc
 
-milestones = [50, 100, 150, 200]
+milestones = [40, 90, 140, 180, 220]
 scheduler = MultiStepLR(optimizer, milestones, gamma=0.1)
 for epoch in range(start_epoch):
     scheduler.step()
