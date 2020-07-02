@@ -30,9 +30,13 @@
 * The train command examples (with a single GPU)
 <pre>
 # ResNet18 on CIFAR
-python3 train.py --checkpoint ResNet18_P4M_on_CIFAR --dataset CIFAR
+python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_on_CIFAR
 # ResNet18 on AIGS
-python3 train.py --checkpoint ResNet18_P4M_on_AIGS --dataset AIGS
+python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_on_AIGS
+# ResNet50 on CIFAR
+python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_P4M_on_CIFAR
+# ResNet50 on AIGS
+python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AIGS
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
@@ -46,9 +50,13 @@ python3 train.py --checkpoint ResNet18_P4M_on_AIGS --dataset AIGS
 * The train command examples (with a single GPU)
 <pre>
 # ResNet18 on CIFAR
-python3 train.py --checkpoint ResNet18_P4M_Mixup_on_CIFAR --dataset CIFAR --mixup
+python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
 # ResNet18 on AIGS
-python3 train.py --checkpoint ResNet18_P4M_Mixup_on_AIGS --dataset AIGS --mixup
+python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
+# ResNet50 on CIFAR
+python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_P4M_Mixup_on_CIFAR --mixup
+# ResNet50 on AIGS
+python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup_on_AIGS --mixup
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
