@@ -126,7 +126,7 @@ def m_range(start=0, stop=2):
 
 def r_range(start=0, stop=4, step=1):
     assert stop > 0
-    # assert stop <= 4
+    assert stop <= 4
     assert start >= 0
     assert start < 4
     assert start < stop
