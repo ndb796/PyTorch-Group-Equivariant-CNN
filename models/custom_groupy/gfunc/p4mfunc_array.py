@@ -1,8 +1,5 @@
-import sys
-sys.path.append('../')
-
-import garray.p4m_array as p4ma
-from gfuncarray import GFuncArray
+import custom_groupy.garray.p4m_array as p4ma
+from custom_groupy.gfunc.gfuncarray import GFuncArray
 
 class P4MFuncArray(GFuncArray):
 
