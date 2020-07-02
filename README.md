@@ -34,6 +34,10 @@
 python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_on_CIFAR
 # ResNet18 on AIGS
 python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_on_AIGS
+# ResNet34 on CIFAR
+python3 train.py --model ResNet34 --dataset CIFAR --checkpoint ResNet34_P4M_on_CIFAR
+# ResNet34 on AIGS
+python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_P4M_on_AIGS
 # ResNet50 on CIFAR
 python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_P4M_on_CIFAR
 # ResNet50 on AIGS
@@ -42,6 +46,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 ||CIFAR-10|AIGS-10|
 |------|---|---|
 |ResNet18|94.44%|47.81%|
+|ResNet34|xx.xx%|xx.xx%|
 |ResNet50|xx.xx%|xx.xx%|
 * [Trained model download]
 
@@ -54,6 +59,10 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 python3 train.py --model ResNet18 --dataset CIFAR --checkpoint ResNet18_P4M_Mixup_on_CIFAR --mixup
 # ResNet18 on AIGS
 python3 train.py --model ResNet18 --dataset AIGS --checkpoint ResNet18_P4M_Mixup_on_AIGS --mixup
+# ResNet34 on CIFAR
+python3 train.py --model ResNet34 --dataset CIFAR --checkpoint ResNet34_P4M_Mixup_on_CIFAR --mixup
+# ResNet34 on AIGS
+python3 train.py --model ResNet34 --dataset AIGS --checkpoint ResNet34_P4M_Mixup_on_AIGS --mixup
 # ResNet50 on CIFAR
 python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_P4M_Mixup_on_CIFAR --mixup
 # ResNet50 on AIGS
@@ -62,6 +71,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 ||CIFAR-10|AIGS-10|
 |------|---|---|
 |ResNet18|95.89%|xx.xx%|
+|ResNet34|xx.xx%|xx.xx%|
 |ResNet50|xx.xx%|xx.xx%|
 * [Trained model download]
 
