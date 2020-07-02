@@ -39,7 +39,6 @@ python3 train.py --checkpoint ResNet18_P4M --dataset CIFAR
 #### 2. Group P4M with Mixup (My Contribution)
 
 * The Mixup method was proposed by Hongyi Zhang in [ICLR 2018](https://arxiv.org/abs/1710.09412).
-    * I used the alpha 
 * The train command example (Single GPU)
 <pre>
 python3 train.py --checkpoint ResNet18_P4M_Mixup --dataset CIFAR --mixup
