@@ -1,10 +1,7 @@
 import numpy as np
 
-import sys
-sys.path.append('../')
-
-import garray.p4_array as p4a
-from gfuncarray import GFuncArray
+import custom_groupy.garray.p4_array as p4a
+from custom_groupy.gfunc.gfuncarray import GFuncArray
 
 class P4FuncArray(GFuncArray):
 
@@ -49,7 +46,7 @@ class P4FuncArray(GFuncArray):
         return gint
 
 def tst():
-    from garray.p4_array import P4Array, meshgrid, u_range, v_range, rotation, translation
+    from custom_groupy.garray.p4_array import P4Array, meshgrid, u_range, v_range, rotation, translation
 
     x = np.random.randn(4, 3, 3)
     c = meshgrid(u=u_range(-1, 2), v=v_range(-1, 2))
