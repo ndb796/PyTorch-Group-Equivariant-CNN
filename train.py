@@ -65,6 +65,8 @@ else:
     print('==> Building model...')
     if args.model == 'ResNet18':
         net = ResNet18()
+    elif args.model == 'ResNet34':
+        net = ResNet34()
     elif args.model == 'ResNet50':
         net = ResNet50()
 
