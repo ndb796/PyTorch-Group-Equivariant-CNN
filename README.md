@@ -8,7 +8,7 @@
 ### Experiment Settings
 
 * The basic source codes used in this repository follows the source codes used in [PyTorch GrouPy Examples](https://github.com/adambielski/pytorch-gconv-experiments).
-    * However, my repository contains the essential library, thus there is no need to install additional libraries.
+    * However, my repository contains essential libraries, thus there is no need to install additional libraries.
 * Architectures: ResNet18, ResNet50
 * Dataset: CIFAR (10 classes), AIGS (10 classes)
 * Training batch size: 128
