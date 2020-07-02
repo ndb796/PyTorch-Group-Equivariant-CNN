@@ -23,6 +23,7 @@ parser.add_argument('--mixup', action='store_true', help='apply the Mixup method
 parser.add_argument('--n_epochs', default=250, type=int)
 parser.add_argument('--checkpoint', required=True)
 parser.add_argument('--dataset', required=True)
+parser.add_argument('--model', required=True)
 args = parser.parse_args()
 
 use_cuda = torch.cuda.is_available()
@@ -62,7 +63,10 @@ if args.resume:
     start_epoch = checkpoint['epoch']
 else:
     print('==> Building model...')
-    net = ResNet18()
+    if args.model == 'ResNet18':
+        net = ResNet18()
+    elif args.model == 'ResNet50':
+        net = ResNet50()
 
 if use_cuda:
     net.cuda()
