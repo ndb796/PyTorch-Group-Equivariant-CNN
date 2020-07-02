@@ -85,7 +85,6 @@ def test_p4m_p4m_conv_equivariance():
     )
 
 def check_equivariance(im, layers, input_array, output_array, point_group):
-
     # Transform the image
     f = input_array(im)
     g = point_group.rand()
