@@ -17,7 +17,7 @@ from torch.autograd import Variable
 from utils import AIGS_Dataset, mixup_data, mixup_criterion
 
 parser = argparse.ArgumentParser(description='PyTorch Training')
-parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
+parser.add_argument('--lr', default=0.01, type=float, help='learning rate')
 parser.add_argument('--resume', action='store_true', help='resume from checkpoint')
 parser.add_argument('--mixup', action='store_true', help='apply the Mixup method')
 parser.add_argument('--n_epochs', default=250, type=int)
