@@ -7,7 +7,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from torch.autograd import Variable
 from custom_groupy.gconv.pytorch_gconv import P4MConvZ2, P4MConvP4M
 
 class BasicBlock(nn.Module):
