@@ -94,7 +94,7 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_
 |------|---|---|
 |ResNet18|88.13%|<b>49.54%</b>|
 |ResNet34|89.85%|48.15%|
-|ResNet50|xx.xx%|xx.xx%|
+|ResNet50|90.67%|xx.xx%|
 
 ### Testing
 
