@@ -45,9 +45,9 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
-|ResNet18|94.44%|<b>46.21%</b>|
-|ResNet34|xx.xx%|38.36%|
-|ResNet50|xx.xx%|27.12%|
+|ResNet18|94.44%|46.21%|
+|ResNet34|94.65%|38.36%|
+|ResNet50|94.68%|27.12%|
 * [Trained model download]
 
 #### 2. Group P4M with Mixup (My Own Experiment)
@@ -70,9 +70,9 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 </pre>
 ||CIFAR-10|AIGS-10|
 |------|---|---|
-|ResNet18|<b>95.89%</b>|43.27%|
-|ResNet34|xx.xx%|38.84%|
-|ResNet50|xx.xx%|26.27%|
+|ResNet18|95.65%|43.27%|
+|ResNet34|<b>96.02%</b>|38.84%|
+|ResNet50|95.92%|26.27%|
 * [Trained model download]
 
 #### 3. Transfer Learning + Group P4M with Mixup (My Own Experiment)
@@ -92,10 +92,10 @@ python3 train.py --model ResNet50 --dataset CIFAR --checkpoint ResNet50_Transfer
 # ResNet50 on AIGS
 python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_Learning_P4M_on_AIGS --transfer_learning --lr=0.001 --n_epochs 80
 </pre>
-||CIFAR-10 (P4M + Mixup) |AIGS-10 (P4M)|
+||CIFAR-10 (with P4M + Mixup) |AIGS-10 (with P4M)|
 |------|---|---|
-|ResNet18|xx.xx%|<b>49.54%</b>|
-|ResNet34|xx.xx%|xx.xx%|
+|ResNet18|88.13%|<b>49.54%</b>|
+|ResNet34|89.85%|48.15%|
 |ResNet50|xx.xx%|xx.xx%|
 * [Trained model download]
 
