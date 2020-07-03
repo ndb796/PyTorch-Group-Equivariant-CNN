@@ -48,7 +48,6 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_on_AI
 |ResNet18|94.44%|46.21%|
 |ResNet34|94.65%|38.36%|
 |ResNet50|94.68%|27.12%|
-* [Trained model download]
 
 #### 2. Group P4M with Mixup (My Own Experiment)
 
@@ -73,7 +72,6 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_P4M_Mixup
 |ResNet18|95.65%|43.27%|
 |ResNet34|<b>96.02%</b>|38.84%|
 |ResNet50|95.92%|26.27%|
-* [Trained model download]
 
 #### 3. Transfer Learning + Group P4M with Mixup (My Own Experiment)
 
@@ -97,7 +95,6 @@ python3 train.py --model ResNet50 --dataset AIGS --checkpoint ResNet50_Transfer_
 |ResNet18|88.13%|<b>49.54%</b>|
 |ResNet34|89.85%|48.15%|
 |ResNet50|xx.xx%|xx.xx%|
-* [Trained model download]
 
 ### Testing
 
